@@ -364,6 +364,1122 @@ section h2 {
 }
 
 
+/* ===============
+   ADOPTION PAGE
+   =============== */
+
+/* Adoption Steps */
+.adoption-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.step-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    flex: 0 1 calc(33.333% - 15px);
+    min-width: 250px;
+    position: relative;
+}
+
+.step-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 auto 15px;
+}
+
+.step-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.step-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Requirements Section */
+.adoption-requirements {
+    background-color: #ecf0f1;
+    padding: 50px 20px;
+    margin: 50px -20px;
+    border-radius: 0;
+}
+
+.adoption-requirements h2 {
+    color: #333;
+}
+
+.requirements-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.requirement-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    flex: 0 1 calc(25% - 15px);
+    min-width: 200px;
+}
+
+.requirement-box h3 {
+    color: #3498db;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.requirement-box p {
+    color: #555;
+    font-size: 14px;
+}
+
+/* Adoption Fees */
+.adoption-fees-section {
+    margin: 50px 0;
+}
+
+.fees-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.fees-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.fee-card {
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    flex: 0 1 calc(33.333% - 15px);
+    min-width: 200px;
+    transition: transform 0.2s ease;
+}
+
+.fee-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.featured-fee {
+    border-color: #3498db;
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(52, 152, 219, 0.2);
+}
+
+.featured-fee:hover {
+    transform: scale(1.05) translateY(-3px);
+}
+
+.fee-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.fee-card .age {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.fee-card .price {
+    font-size: 36px;
+    font-weight: bold;
+    color: #3498db;
+}
+
+/* Adoption CTA */
+.adoption-cta {
+    background-color: #3498db;
+    padding: 60px 20px;
+    text-align: center;
+    margin: 50px -20px;
+    border-radius: 0;
+}
+
+.adoption-cta h2 {
+    color: white;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.adoption-cta .btn-primary {
+    background-color: white;
+    color: #3498db;
+}
+
+.adoption-cta .btn-secondary {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+.adoption-cta .btn-secondary:hover {
+    background-color: rgba(255,255,255,0.15);
+}
+
+
+/* ===============
+   SERVICES PAGE
+   =============== */
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.service-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 35px;
+    border-left: 5px solid #3498db;
+}
+
+.service-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.2s ease;
+}
+
+.service-item h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-item > p {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.service-item h4 {
+    color: #3498db;
+    font-size: 15px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.service-details {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.service-details li {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.service-link {
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.service-link:hover {
+    background-color: #2980b9;
+}
+
+/* Services CTA */
+.services-cta {
+    background-color: #ecf0f1;
+    padding: 60px 20px;
+    text-align: center;
+    margin: 50px -20px;
+}
+
+.services-cta p {
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+
+/* =============
+   ABOUT PAGE
+   ============= */
+
+/* Mission Section */
+.about-mission {
+    background-color: #3498db;
+    padding: 60px 20px;
+    margin: 0 -20px 50px;
+    text-align: center;
+}
+
+.mission-text h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.mission-text p {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Our Story */
+.our-story {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.our-story p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Impact Stats */
+.impact-stats {
+    background-color: #ecf0f1;
+    padding: 60px 20px;
+    margin: 50px -20px;
+}
+
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 35px 30px;
+    text-align: center;
+    flex: 0 1 calc(25% - 15px);
+    min-width: 180px;
+    border: 1px solid #ddd;
+}
+
+.stat-number {
+    font-size: 42px;
+    font-weight: bold;
+    color: #3498db;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    color: #666;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Values */
+.our-values {
+    margin: 50px 0;
+}
+
+.values-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.value-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    flex: 0 1 calc(25% - 15px);
+    min-width: 200px;
+    border-top: 4px solid #3498db;
+}
+
+.value-item h3 {
+    color: #3498db;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.value-item p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Team */
+.our-team {
+    margin: 50px 0;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.team-member {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px 20px;
+    text-align: center;
+    flex: 0 1 calc(33.333% - 18px);
+    min-width: 220px;
+    transition: box-shadow 0.2s ease;
+}
+
+.team-member:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    background-color: #e0e0e0;
+    border: 3px solid #3498db;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 17px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.member-title {
+    color: #3498db;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* About CTA */
+.about-cta {
+    background-color: #3498db;
+    padding: 60px 20px;
+    text-align: center;
+    margin: 50px -20px;
+}
+
+.about-cta h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.about-cta p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.about-cta .btn-primary {
+    background-color: white;
+    color: #3498db;
+}
+
+.about-cta .btn-secondary {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+.about-cta .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+/* ===============
+   CONTACT PAGE
+   =============== */
+
+.contact-content {
+    margin: 50px 0;
+}
+
+.contact-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-info-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 35px;
+    flex: 1 1 300px;
+}
+
+.contact-info-box h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+}
+
+.contact-detail {
+    margin-bottom: 20px;
+}
+
+.contact-detail h4 {
+    color: #3498db;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.contact-detail p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.contact-detail a {
+    color: #3498db;
+}
+
+.contact-detail a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 35px;
+    flex: 2 1 400px;
+}
+
+.contact-form-box h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: inherit;
+    color: #333;
+    background-color: #fafafa;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.form-group small {
+    display: block;
+    color: #888;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #2980b9;
+}
+
+.form-note {
+    color: #888;
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Quick Info Section */
+.quick-info {
+    margin: 50px 0;
+}
+
+.info-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.info-link-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    flex: 0 1 calc(25% - 15px);
+    min-width: 180px;
+    transition: all 0.2s ease;
+    color: #333;
+    border-top: 4px solid #3498db;
+}
+
+.info-link-card:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.info-link-card h3 {
+    font-size: 16px;
+    color: #3498db;
+    margin-bottom: 8px;
+}
+
+.info-link-card p {
+    color: #666;
+    font-size: 13px;
+}
+
+
+/* ==============
+   DONATE PAGE
+   ============== */
+
+/* How You Can Help */
+.donation-options {
+    margin: 50px 0;
+}
+
+.help-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.help-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    flex: 0 1 calc(33.333% - 15px);
+    min-width: 220px;
+    border-top: 4px solid #e67e22;
+}
+
+.help-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+}
+
+.help-card h3 {
+    color: #e67e22;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.help-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Sponsor Section */
+.sponsor-section {
+    margin: 50px 0;
+}
+
+.sponsor-intro {
+    text-align: center;
+    color: #555;
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0 auto 35px;
+    line-height: 1.7;
+}
+
+.sponsorship-levels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.sponsor-level {
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    flex: 0 1 calc(33.333% - 15px);
+    min-width: 220px;
+    transition: transform 0.2s ease;
+}
+
+.sponsor-level:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.featured-sponsor {
+    border-color: #e67e22;
+    transform: scale(1.04);
+    box-shadow: 0 4px 16px rgba(230, 126, 34, 0.2);
+}
+
+.featured-sponsor:hover {
+    transform: scale(1.04) translateY(-3px);
+}
+
+.sponsor-level h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.sponsor-price {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+
+.sponsor-benefits {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+}
+
+.sponsor-benefits li {
+    color: #555;
+    font-size: 14px;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+    padding-left: 18px;
+    position: relative;
+}
+
+.sponsor-benefits li::before {
+    content: "✓";
+    color: #27ae60;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Sponsor Dogs Grid */
+.sponsor-dogs {
+    margin-top: 40px;
+}
+
+.sponsor-dogs h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.sponsor-dog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.sponsor-dog-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    flex: 0 1 calc(33.333% - 18px);
+    min-width: 220px;
+    padding-bottom: 20px;
+}
+
+.sponsor-dog-image {
+    width: 100%;
+    height: 200px;
+    background-color: #e0e0e0;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.sponsor-dog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sponsor-dog-card h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.sponsor-dog-card > p {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+/* General Donation Section */
+.general-donation {
+    background-color: #ecf0f1;
+    padding: 60px 20px;
+    margin: 50px -20px;
+}
+
+.donation-intro {
+    text-align: center;
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.donation-types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.donation-type-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    flex: 1 1 350px;
+    text-align: center;
+}
+
+.donation-type-box h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.donation-amounts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.amount-btn {
+    padding: 10px 18px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    background-color: white;
+    color: #3498db;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.amount-btn:hover,
+.amount-btn.active {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Impact / Donation Breakdown */
+.donation-impact {
+    margin: 50px 0;
+}
+
+.impact-breakdown {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.impact-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    flex: 0 1 calc(25% - 15px);
+    min-width: 180px;
+}
+
+.impact-percentage {
+    font-size: 40px;
+    font-weight: bold;
+    color: #e67e22;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.impact-item h4 {
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.impact-item p {
+    color: #888;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* Tax Info */
+.tax-info {
+    margin: 50px 0;
+}
+
+.tax-details {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tax-details p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 5px;
+}
+
+/* Donation CTA */
+.donation-cta {
+    background-color: #e67e22;
+    padding: 60px 20px;
+    text-align: center;
+    margin: 50px -20px;
+}
+
+.donation-cta h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.donation-cta p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 25px;
+    font-size: 16px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.donation-cta .btn-primary {
+    background-color: white;
+    color: #e67e22;
+    border-color: white;
+    display: inline-block;
+}
+
+.donation-cta .btn-primary:hover {
+    background-color: #ecf0f1;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    /* Adoption */
+    .step-card {
+        flex: 0 1 100%;
+    }
+
+    .requirement-box,
+    .fee-card {
+        flex: 0 1 100%;
+    }
+
+    .featured-fee,
+    .featured-sponsor {
+        transform: none;
+    }
+
+    .adoption-cta,
+    .about-cta,
+    .services-cta,
+    .donation-cta {
+        padding: 40px 15px;
+        margin: 50px -15px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Services */
+    .service-item {
+        padding: 20px;
+    }
+
+    /* About */
+    .stat-card,
+    .value-item,
+    .team-member {
+        flex: 0 1 100%;
+    }
+
+    .about-mission,
+    .impact-stats {
+        padding: 40px 15px;
+        margin: 50px -15px;
+    }
+
+    /* Contact */
+    .contact-grid {
+        flex-direction: column;
+    }
+
+    .info-link-card {
+        flex: 0 1 calc(50% - 10px);
+    }
+
+    /* Donate */
+    .help-card,
+    .sponsor-level,
+    .sponsor-dog-card,
+    .impact-item {
+        flex: 0 1 100%;
+    }
+
+    .general-donation {
+        padding: 40px 15px;
+        margin: 50px -15px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    /* Adoption */
+    .step-card {
+        flex: 0 1 calc(50% - 10px);
+    }
+
+    .fee-card {
+        flex: 0 1 calc(33.333% - 14px);
+    }
+
+    /* About */
+    .stat-card {
+        flex: 0 1 calc(50% - 10px);
+    }
+
+    .team-member {
+        flex: 0 1 calc(50% - 13px);
+    }
+
+    /* Donate */
+    .impact-item {
+        flex: 0 1 calc(50% - 10px);
+    }
+}
+
 /* ====== FOOTER================== */
 
 footer {
