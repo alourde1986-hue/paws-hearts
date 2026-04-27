@@ -232,6 +232,22 @@ section h2 {
     font-size: 14px;
 }
 
+.view-profile-link {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 18px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.view-profile-link:hover {
+    background-color: #2980b9;
+}
+
 
 /* ========== INFO BOXES =============== */
 
@@ -566,19 +582,57 @@ section h2 {
    SERVICES PAGE
    =============== */
 
+/* Intro paragraph above the ordered list */
+.services-intro {
+    max-width: 850px;
+    margin: 50px auto 30px;
+    text-align: center;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Ordered list of major service categories */
 .services-list {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin: 50px 0;
+    list-style-position: outside;
+    padding-left: 50px;
+    margin: 30px 0 50px;
+    counter-reset: service-counter;
+}
+
+/* Custom-styled numbered markers using counters
+   (replaces the default ol numbering for a cleaner look) */
+.services-list {
+    list-style: none;
+    padding-left: 0;
 }
 
 .service-item {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 35px;
+    padding: 35px 35px 35px 90px;
+    margin-bottom: 30px;
     border-left: 5px solid #3498db;
+    position: relative;
+    counter-increment: service-counter;
+}
+
+.service-item::before {
+    content: counter(service-counter);
+    position: absolute;
+    left: 25px;
+    top: 35px;
+    width: 45px;
+    height: 45px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .service-item:hover {
@@ -594,29 +648,32 @@ section h2 {
 
 .service-item > p {
     color: #555;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
     font-size: 15px;
+    line-height: 1.6;
 }
 
 .service-item h4 {
     color: #3498db;
-    font-size: 15px;
-    margin-bottom: 10px;
+    font-size: 14px;
+    margin-bottom: 12px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-.service-details {
+/* Nested unordered list of hours of operation
+   (overrides the global "ul { list-style: none }" rule) */
+.service-hours {
     list-style: disc;
-    padding-left: 20px;
-    margin-bottom: 20px;
+    padding-left: 22px;
+    margin-bottom: 22px;
 }
 
-.service-details li {
+.service-hours li {
     color: #555;
     font-size: 14px;
-    margin-bottom: 6px;
-    line-height: 1.5;
+    margin-bottom: 8px;
+    line-height: 1.6;
 }
 
 .service-link {
@@ -970,6 +1027,61 @@ section h2 {
     color: #888;
     font-size: 12px;
     margin-top: 4px;
+}
+
+/* Side-by-side field rows (first/last name, city/zip) */
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* JavaScript validation states */
+.form-group input.invalid,
+.form-group textarea.invalid {
+    border-color: #c0392b;
+    background-color: #fdecea;
+}
+
+.form-group input.valid,
+.form-group textarea.valid {
+    border-color: #27ae60;
+}
+
+.error-message {
+    display: block;
+    color: #c0392b;
+    font-size: 13px;
+    margin-top: 5px;
+    min-height: 16px;
+}
+
+/* Overall form feedback (success / failure summary) */
+.form-feedback {
+    margin: 15px 0;
+    padding: 0;
+    font-size: 14px;
+    text-align: center;
+    min-height: 20px;
+}
+
+.form-feedback.success {
+    padding: 12px;
+    background-color: #d4efdf;
+    color: #1d6f3a;
+    border: 1px solid #27ae60;
+    border-radius: 5px;
+}
+
+.form-feedback.error {
+    padding: 12px;
+    background-color: #fdecea;
+    color: #a93226;
+    border: 1px solid #c0392b;
+    border-radius: 5px;
 }
 
 .btn-submit {
@@ -1415,7 +1527,13 @@ section h2 {
 
     /* Services */
     .service-item {
-        padding: 20px;
+        padding: 80px 20px 25px;
+    }
+
+    .service-item::before {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 20px;
     }
 
     /* About */
@@ -1436,6 +1554,11 @@ section h2 {
         flex-direction: column;
     }
 
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
     .info-link-card {
         flex: 0 1 calc(50% - 10px);
     }
@@ -1449,6 +1572,39 @@ section h2 {
     }
 
     .general-donation {
+        padding: 40px 15px;
+        margin: 50px -15px;
+    }
+
+    /* Dog Details */
+    .dog-hero {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .dog-hero-info h2 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .dog-tagline {
+        text-align: center;
+    }
+
+    .dog-hero-buttons {
+        flex-direction: column;
+    }
+
+    .gallery-item {
+        flex: 0 1 calc(50% - 8px);
+    }
+
+    .detail-box,
+    .medical-item {
+        flex: 0 1 100%;
+    }
+
+    .dog-cta {
         padding: 40px 15px;
         margin: 50px -15px;
     }
@@ -1479,6 +1635,276 @@ section h2 {
         flex: 0 1 calc(50% - 10px);
     }
 }
+
+/* ====== DOG DETAILS PAGE ====== */
+
+/* Hero: large photo + name and key facts side-by-side */
+.dog-hero {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+
+.dog-hero-image {
+    flex: 1 1 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #e0e0e0;
+    max-height: 450px;
+}
+
+.dog-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dog-hero-info {
+    flex: 1 1 300px;
+}
+
+.dog-hero-info h2 {
+    text-align: left;
+    font-size: 48px;
+    color: #3498db;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.dog-tagline {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.dog-hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Photo gallery */
+.dog-gallery {
+    margin: 50px 0;
+}
+
+.dog-gallery h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.gallery-grid {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    flex: 0 1 calc(20% - 12px);
+    min-width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #e0e0e0;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Quick Facts + Personality two-column section */
+.dog-details-grid {
+    display: flex;
+    gap: 30px;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+
+.detail-box {
+    flex: 1 1 350px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-left: 5px solid #3498db;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.detail-box h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Definition list for quick facts */
+.dog-facts {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px 20px;
+}
+
+.dog-facts dt {
+    font-weight: bold;
+    color: #3498db;
+    font-size: 14px;
+}
+
+.dog-facts dd {
+    color: #555;
+    font-size: 14px;
+}
+
+/* Personality bullets (override global ul list-style: none) */
+.personality-list {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.personality-list li {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* About prose */
+.dog-about {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 35px;
+    margin: 50px 0;
+}
+
+.dog-about h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.dog-about p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+/* Medical information grid */
+.dog-medical {
+    margin: 50px 0;
+}
+
+.dog-medical h3 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.medical-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.medical-item {
+    flex: 0 1 calc(25% - 15px);
+    min-width: 180px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+}
+
+.medical-item h4 {
+    color: #3498db;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.medical-item p {
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Final CTA */
+.dog-cta {
+    background-color: #3498db;
+    padding: 60px 20px;
+    text-align: center;
+    margin: 50px -20px;
+    border-radius: 0;
+}
+
+.dog-cta h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.dog-cta p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.dog-cta .btn-primary {
+    background-color: white;
+    color: #3498db;
+    border-color: white;
+}
+
+.dog-cta .btn-primary:hover {
+    background-color: #ecf0f1;
+}
+
+.dog-cta .btn-secondary {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+.dog-cta .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Back to dogs link */
+.back-to-dogs {
+    text-align: center;
+    margin: 30px 0 50px;
+}
+
+.back-link {
+    color: #3498db;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.back-link:hover {
+    background-color: #3498db;
+    color: white;
+}
+
 
 /* ====== FOOTER================== */
 

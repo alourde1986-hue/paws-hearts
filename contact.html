@@ -62,64 +62,98 @@
 
                 <article class="contact-form-box">
                     <h3>Send Us a Message</h3>
-                    
-                    <form class="contact-form" action="#" method="post">
-                        <div class="form-group">
-                            <label for="name">Name *</label>
-                            <input 
-                                type="text" 
-                                id="name" 
-                                name="name" 
-                                required 
-                                minlength="2"
-                                placeholder="Your full name">
+
+                    <form id="contactForm" class="contact-form" action="#" method="post" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    name="firstName"
+                                    placeholder="Jane">
+                                <span class="error-message" id="firstNameError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    name="lastName"
+                                    placeholder="Doe">
+                                <span class="error-message" id="lastNameError"></span>
+                            </div>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email *</label>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                required 
+                            <input
+                                type="text"
+                                id="email"
+                                name="email"
                                 placeholder="your.email@example.com">
+                            <span class="error-message" id="emailError"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="phone">Phone</label>
-                            <input 
-                                type="tel" 
-                                id="phone" 
-                                name="phone" 
-                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
                                 placeholder="123-456-7890">
                             <small>Format: 123-456-7890</small>
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City *</label>
+                                <input
+                                    type="text"
+                                    id="city"
+                                    name="city"
+                                    placeholder="Boston">
+                                <span class="error-message" id="cityError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="zip">Zip Code *</label>
+                                <input
+                                    type="text"
+                                    id="zip"
+                                    name="zip"
+                                    maxlength="10"
+                                    placeholder="12345 or 12345-6789">
+                                <span class="error-message" id="zipError"></span>
+                            </div>
                         </div>
 
                         <div class="form-group">
                             <label for="subject">Subject *</label>
-                            <input 
-                                type="text" 
-                                id="subject" 
-                                name="subject" 
-                                required 
-                                minlength="3"
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
                                 placeholder="How can we help?">
+                            <span class="error-message" id="subjectError"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="message">Message *</label>
-                            <textarea 
-                                id="message" 
-                                name="message" 
-                                rows="6" 
-                                required 
-                                minlength="10"
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="6"
                                 placeholder="Tell us more about your inquiry..."></textarea>
+                            <span class="error-message" id="messageError"></span>
                         </div>
 
+                        <div class="form-feedback" id="formFeedback" role="status" aria-live="polite"></div>
+
                         <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
-                        
+
                         <p class="form-note">* Required fields</p>
                     </form>
                 </article>
@@ -137,7 +171,7 @@
                     <h3>Services</h3>
                     <p>Explore our support programs</p>
                 </a>
-                <a href="donation.html" class="info-link-card">
+                <a href="donate.html" class="info-link-card">
                     <h3>Donation Info</h3>
                     <p>Support our mission</p>
                 </a>
@@ -156,7 +190,7 @@
                 <ul>
                     <li><a href="dogs.html">Available Dogs</a></li>
                     <li><a href="adoption.html">Adoption Process</a></li>
-                    <li><a href="donation.html">Donate</a></li>
+                    <li><a href="donate.html">Donate</a></li>
                 </ul>
             </div>
 
@@ -179,5 +213,6 @@
             <p>&copy; 2026 Paws &amp; Hearts Dog Adoption. All rights reserved. Jean Mitilien</p>
         </div>
     </footer>
+    <script src="js/validation.js"></script>
 </body>
 </html>
